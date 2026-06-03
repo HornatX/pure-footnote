@@ -1,0 +1,9 @@
+{
+  "id": "pure-footnote",
+  "name": "Pure Footnote",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "A clean sidebar tool to manage footnotes and annotations, supporting synchronized highlighting and editing.",
+  "author": "hornat",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,168 @@
+/* 容器布局 */
+.pure-footnote-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 工具栏样式 (模仿 Quiet Outline) */
+.pure-footnote-toolbar {
+    display: flex;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    gap: 8px;
+    align-items: center;
+    flex-shrink: 0; /* 防止被压缩 */
+}
+
+/* 按钮基础样式 */
+.pure-footnote-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 图标尺寸修正 */
+.pure-footnote-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.pure-footnote-btn:hover {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+.pure-footnote-btn.is-active {
+    color: var(--text-on-accent);
+}
+
+/* 列表区域 */
+.pure-footnote-list-root {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.pure-footnote-item {
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+}
+
+.pure-footnote-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.pure-footnote-item.is-active {
+    background-color: var(--background-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pure-footnote-item.is-active .pure-footnote-content {
+    color: rgb(0, 157, 255) !important;
+    font-weight: bold;
+}
+
+.pure-footnote-item.is-hover-note {
+    background-color: var(--background-secondary-alt);
+}
+
+.pure-footnote-key {
+    font-weight: bold;
+    color: var(--text-accent);
+    flex-shrink: 0;
+    display: none; /* 隐藏 [^1] */
+}
+
+.pure-footnote-item.is-active .pure-footnote-key {
+    color: inherit;
+}
+
+.pure-footnote-content {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 悬停时文字颜色变深 */
+.pure-footnote-item:hover .pure-footnote-content {
+    color: var(--text-normal);
+}
+
+/* 整个容器的内边距 */
+.pure-footnote-container {
+    padding: 12px;
+}
+
+/* 空状态提示 */
+.pure-footnote-empty {
+    color: var(--text-faint);
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.modal-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+}
+
+/* 隐藏 Obsidian 核心 Page Preview (页面预览/脚注预览) 弹窗的标题栏 */
+.pure-footnote-beautify-enabled div.popover-titlebar {
+    display: none !important;
+}
+
+.popover.hover-popover-note .popover-content {
+    padding-top: 0 !important;
+}
+
+/* 增大页面预览弹窗（包括脚注弹窗）中的文字大小 */
+.pure-footnote-beautify-enabled .popover.hover-popover .markdown-preview-view {
+    font-size: 1.4em; 
+    line-height: 1.6;
+}
+
+/* 针对 编辑模式 增大文字大小 */
+.pure-footnote-beautify-enabled .popover.hover-popover .markdown-preview-view {
+    font-size: 1.5em; 
+    line-height: 1.6;
+}
+
+.pure-footnote-beautify-enabled .popover.hover-popover .cm-editor {
+    font-size: 1.7em !important; 
+}
+
+.pure-footnote-beautify-enabled .popover.hover-popover.is-editing {
+    outline: none !important; 
+    border: none !important; 
+    border-color: transparent !important;
+}
+
+.cm-s-obsidian span.cm-footref.cm-hmd-barelink, 
+.cm-s-obsidian span.cm-blockid {
+    color: var(--text-muted);
+}
+
+/* 最终修复方案：隔离源码模式 + 解决符号重复问题 */
+.markdown-source-view:not(.is-source-mode) span.cm-footref.cm-hmd-barelink::before {
+    content: none !important;
+}
+
+.markdown-source-view:not(.is-source-mode) span.cm-footref.cm-hmd-barelink:not(:last-child)::after {
+    content: none !important;
+}
