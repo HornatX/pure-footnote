@@ -1,5 +1,11 @@
 Pure Footnote (脚注 & 注记大纲)
 
+如果您觉得这款插件对您有帮助，欢迎在小红书（RED）上关注我，我会在那里分享更多技巧、教程和更新。
+
+If you find this plugin helpful, feel free to follow me on Xiaohongshu (RED) where I share more tips, tutorials, and updates.
+
+https://www.xiaohongshu.com/user/profile/6353523d000000001802f8ae?xsec_token=YB4vLkLfzOijtg8c1Vh12ZASaI1ByqPPYi82ZzKbG72qE=&xsec_source=app_share&xhsshare=QQ&appuid=6353523d000000001802f8ae&apptime=1780631605&share_id=3846902afcd94e2ab78467cd7b9b5669
+
 适用于 Obsidian 的脚注与行内注记大纲。支持在侧边栏管理、快速跳转及直接编辑文档中的所有脚注与自定义悬浮注记。
 
 插件还在测试当中，如果有 bug 或错误，加群讨论。 QQ 交流群: 1094620986
