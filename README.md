@@ -39,6 +39,21 @@
 
 ***
 
+### 赞赏支持
+
+<details>
+<summary>🎁 如果觉得有用，请作者喝杯咖啡</summary>
+
+<br>
+
+<p align="center">
+  <img src="assets/赞赏码.JPG" width="250" />
+</p>
+
+</details>
+
+***
+
 ### 安装方法
 
 #### 方法一：社区插件安装（推荐）
